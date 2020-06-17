@@ -1,0 +1,29 @@
+name: .NET Core
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+    name: Update NuGet
+    steps:
+    - uses: actions/checkout@v1
+
+    - name: Install NuGet client
+      uses: nuget/setup-nuget@v1
+
+    - name: Build solution and generate NuGet package
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: dotnet pack
+      shell: bash
+
+    - name: Push generated package to GitHub registry
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}    
+      run: nuget push ..\LoggerMessageGenerator\LoggerMessageGenerator\nupkg\*.nupkg -Source "github"
