@@ -1,0 +1,30 @@
+using System;
+using Microsoft.Extensions.Logging;
+
+namespace <%Namespace%>
+{
+    internal static class LoggerExtensions
+    {
+        static LoggerExtensions()
+        {
+        <%#Events%>
+            <%Name%>Occured = LoggerMessage.Define<%^IsException%><string><%/IsException%>(LogLevel.<%Level%>,
+                new EventId(<%Id%>, "<%Name%>"),
+                $"<%LevelUpperCase%> | <%Source%>: <%^IsException%>{{message}}<%/IsException%>");
+            
+         <%/Events%>
+        }
+    
+        <%#Events%>
+                
+         internal static void Log<%Name%>(this ILogger logger, <%^IsException%>string message<%/IsException%><%#IsException%>Exception exception<%/IsException%>)
+            => <%Name%>Occured(logger, <%^IsException%>message, null<%/IsException%><%#IsException%>exception<%/IsException%>);
+        <%/Events%>
+    
+    
+        <%#Events%>
+        
+        private static readonly Action<ILogger, <%^IsException%>string, <%/IsException%>Exception> <%Name%>Occured;
+        <%/Events%>
+    }
+}

@@ -1,0 +1,3 @@
+[
+  {"id": 1, "name": "EventName", "level": "Information", "source": "SomeClass", "isException": true}
+]
