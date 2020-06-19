@@ -7,8 +7,17 @@
         <PackageOutputPath>./nupkg</PackageOutputPath>
         <TargetFramework>netcoreapp3.1</TargetFramework>
         <PackageVersion>0.5</PackageVersion>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+        <Description>LoggerMessageGenerator</Description>
+        <PackageReleaseNotes>LoggerMessageGenerator</PackageReleaseNotes>
         <Title>LoggerMessageGenerator</Title>
+        <Company>HappyTravel</Company>
         <Authors>Vadim Mingazhev</Authors>
+        <PackageProjectUrl>https://github.com/happy-travel/logger-message-generator</PackageProjectUrl>
+        <RepositoryURL>https://github.com/happy-travel/logger-message-generator</RepositoryURL>
+        <Version>0.5</Version>
+        <Nullable>enable</Nullable>
     </PropertyGroup>
 
     <ItemGroup>
