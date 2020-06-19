@@ -25,4 +25,4 @@ jobs:
     - name: Push generated package to GitHub registry
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}    
-      run: nuget push ..\logger-message-generator\logger-message-generator\nupkg\*.nupkg -Source "github"
+      run: nuget push ..\LoggerMessageGenerator\LoggerMessageGenerator\nupkg\*.nupkg -Source "github"
