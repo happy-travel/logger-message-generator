@@ -25,7 +25,7 @@ The solution is implemented as a dotnet tool, more information at https://docs.m
 
 #### How to use:
 1. Add `LogEvents.json` file to the project folder, in which `LoggerExtensions.g.cs` should be generated. 
-2. Fill file contents using an example at https://github.com/happy-travel/logger-message-generator/blob/master/LoggerMessageGenerator/Example/LogEvents.json
+2. Fill file contents using **'LogEvents.json format'** section
 3. Open command prompt and navigate to target project folder
 4. Run `generate-logmessages` command
 
