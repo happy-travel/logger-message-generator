@@ -47,7 +47,15 @@ namespace LoggerMessageGenerator
 
             static string GetSourceFilePath()
             {
-                var files = Directory.GetFiles(Directory.GetCurrentDirectory(), Constants.LogEventsFileName, SearchOption.AllDirectories);
+                var files = Directory
+                    .GetFiles(Directory.GetCurrentDirectory(), Constants.LogEventsFileName, SearchOption.AllDirectories)
+                    .Where(f=>
+                    {
+                        var directory = Path.GetDirectoryName(f) ?? string.Empty;
+                        return !directory.Contains("bin") && directory.Contains("obj");
+                    })
+                    .ToArray();
+                
                 if (!files.Any())
                     throw new Exception($"Could find '{Constants.LogEventsFileName}'");
 
