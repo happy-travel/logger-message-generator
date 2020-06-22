@@ -1,3 +1,4 @@
+#### Summary
 Log delegates generator tool. Uses LogEvents.json from project to generate ILogger extensions for high performance logging https://docs.microsoft.com/en-us/aspnet/core/fundamentals/logging/loggermessage?view=aspnetcore-3.1
 
 The solution is implemented as a dotnet tool, more information at https://docs.microsoft.com/en-us/dotnet/core/tools/global-tools
