@@ -52,7 +52,7 @@ namespace LoggerMessageGenerator
                     .Where(f=>
                     {
                         var directory = Path.GetDirectoryName(f) ?? string.Empty;
-                        return !directory.Contains("bin") && directory.Contains("obj");
+                        return !directory.Contains("bin") && !directory.Contains("obj");
                     })
                     .ToArray();
                 

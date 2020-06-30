@@ -6,7 +6,7 @@
         <ToolCommandName>generate-logmessages</ToolCommandName>
         <PackageOutputPath>./nupkg</PackageOutputPath>
         <TargetFramework>netcoreapp3.1</TargetFramework>
-        <PackageVersion>0.5.1</PackageVersion>
+        <PackageVersion>0.5.2</PackageVersion>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
         <Description>LoggerMessageGenerator</Description>
