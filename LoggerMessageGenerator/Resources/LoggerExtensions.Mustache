@@ -17,7 +17,7 @@ namespace <%Namespace%>
     
         <%#Events%>
                 
-         internal static void Log<%Name%>(this ILogger logger, <%^IsException%>string message<%/IsException%><%#IsException%>Exception exception<%/IsException%>)
+         public static void Log<%Name%>(this ILogger logger, <%^IsException%>string message<%/IsException%><%#IsException%>Exception exception<%/IsException%>)
             => <%Name%>Occured(logger, <%^IsException%>message, null<%/IsException%><%#IsException%>exception<%/IsException%>);
         <%/Events%>
     

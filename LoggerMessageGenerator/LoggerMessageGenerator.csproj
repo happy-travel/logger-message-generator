@@ -10,13 +10,13 @@
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
         <Description>LoggerMessageGenerator</Description>
-        <PackageReleaseNotes>Fixed searching json in /bin folder</PackageReleaseNotes>
+        <PackageReleaseNotes>Changed template to make log methods public</PackageReleaseNotes>
         <Title>LoggerMessageGenerator</Title>
         <Company>HappyTravel</Company>
         <Authors>Vadim Mingazhev</Authors>
         <PackageProjectUrl>https://github.com/happy-travel/logger-message-generator</PackageProjectUrl>
         <RepositoryURL>https://github.com/happy-travel/logger-message-generator</RepositoryURL>
-        <Version>0.5</Version>
+        <Version>0.5.1</Version>
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
